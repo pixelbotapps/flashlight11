@@ -212,35 +212,35 @@ class SettingScreenState extends State<SettingScreen>
                                 style: TextStyle(fontSize: 16),
                               ),
                             ),
-//                          if (widget.user != null)
-//                            Card(
-//                              color: Theme.of(context).backgroundColor,
-//                              margin: EdgeInsets.only(bottom: 2.0),
-//                              elevation: 0,
-//                              child: ListTile(
-//                                leading: Icon(
-//                                  Icons.portrait,
-//                                  color: Theme.of(context).accentColor,
-//                                  size: 25,
-//                                ),
-//                                title: Text(
-//                                  S.of(context).updateUserInfor,
-//                                  style: TextStyle(fontSize: 15),
-//                                ),
-//                                trailing: Icon(
-//                                  Icons.arrow_forward_ios,
-//                                  size: 18,
-//                                  color: kGrey600,
-//                                ),
-//                                onTap: () {
-//                                  Navigator.push(
-//                                    context,
-//                                    MaterialPageRoute(
-//                                        builder: (context) => UserUpdate()),
-//                                  );
-//                                },
-//                              ),
-//                            ),
+                         if (widget.user != null)
+                           Card(
+                             color: Theme.of(context).backgroundColor,
+                             margin: EdgeInsets.only(bottom: 2.0),
+                             elevation: 0,
+                             child: ListTile(
+                               leading: Icon(
+                                 Icons.portrait,
+                                 color: Theme.of(context).accentColor,
+                                 size: 25,
+                               ),
+                               title: Text(
+                                 S.of(context).updateUserInfor,
+                                 style: TextStyle(fontSize: 15),
+                               ),
+                               trailing: Icon(
+                                 Icons.arrow_forward_ios,
+                                 size: 18,
+                                 color: kGrey600,
+                               ),
+                               onTap: () {
+                                 Navigator.push(
+                                   context,
+                                   MaterialPageRoute(
+                                       builder: (context) => UserUpdate()),
+                                 );
+                               },
+                             ),
+                           ),
                          if (widget.user == null)
                             Card(
                               color: Theme.of(context).backgroundColor,
@@ -287,313 +287,313 @@ class SettingScreenState extends State<SettingScreen>
                                     size: 18, color: kGrey600),
                               ),
                             ),
-//                          SizedBox(height: 30.0),
-//                          Text(
-//                            S.of(context).generalSetting,
-//                            style: TextStyle(
-//                                fontSize: 18, fontWeight: FontWeight.w600),
-//                          ),
-//                          SizedBox(height: 10.0),
-//                          if (widget.user != null)
-//                            Divider(
-//                              color: Colors.black12,
-//                              height: 1.0,
-//                              indent: 75,
-//                              //endIndent: 20,
-//                            ),
-//                          Card(
-//                            margin: EdgeInsets.only(bottom: 2.0),
-//                            elevation: 0,
-//                            child: ListTile(
-//                              leading: Icon(
-//                                Icons.favorite_border,
-//                                color: Theme.of(context).accentColor,
-//                                size: 26,
-//                              ),
-//                              title: Text(
-//                                S.of(context).myWishList,
-//                                style: TextStyle(fontSize: 15),
-//                              ),
-//                              trailing: Row(
-//                                mainAxisSize: MainAxisSize.min,
-//                                children: [
-//                                  if (wishListCount > 0)
-//                                    Text(
-//                                      "$wishListCount ${S.of(context).items}",
-//                                      style: TextStyle(
-//                                          fontSize: 14,
-//                                          color:
-//                                              Theme.of(context).primaryColor),
-//                                    ),
-//                                  SizedBox(width: 5),
-//                                  Icon(Icons.arrow_forward_ios,
-//                                      size: 18, color: kGrey600)
-//                                ],
-//                              ),
-//                              onTap: () {
-//                                Navigator.pushNamed(context, "/wishlist");
-//                              },
-//                            ),
-//                          ),
-//                          Divider(
-//                            color: Colors.black12,
-//                            height: 1.0,
-//                            indent: 75,
-//                            //endIndent: 20,
-//                          ),
-//                          Card(
-//                            margin: EdgeInsets.only(bottom: 2.0),
-//                            elevation: 0,
-//                            child: SwitchListTile(
-//                              secondary: Icon(
-//                                Icons.notifications_none,
-//                                color: Theme.of(context).accentColor,
-//                                size: 26,
-//                              ),
-//                              value: enabledNotification,
-//                              activeColor: Color(0xFF0066B4),
-//                              onChanged: (bool value) {
-//                                if (value) {
-//                                  NotificationPermissions
-//                                      .requestNotificationPermissions(
-//                                    iosSettings: NotificationSettingsIos(
-//                                        sound: true, badge: true, alert: true),
-//                                  ).then((_) {
-//                                    checkNotificationPermission();
-//                                  });
-//                                }
-//                                setState(() {
-//                                  enabledNotification = value;
-//                                });
-//                              },
-//                              title: Text(
-//                                S.of(context).getNotification,
-//                                style: TextStyle(fontSize: 16),
-//                              ),
-//                            ),
-//                          ),
-//                          Divider(
-//                            color: Colors.black12,
-//                            height: 1.0,
-//                            indent: 75,
-//                            //endIndent: 20,
-//                          ),
-//                          if (enabledNotification)
-//                            Card(
-//                              margin: EdgeInsets.only(bottom: 2.0),
-//                              elevation: 0,
-//                              child: GestureDetector(
-//                                onTap: () {
-//                                  Navigator.push(
-//                                    context,
-//                                    MaterialPageRoute(
-//                                        builder: (context) =>
-//                                            NotificationScreen()),
-//                                  );
-//                                },
-//                                child: ListTile(
-//                                  leading: Icon(
-//                                    Icons.list,
-//                                    size: 24,
-//                                    color: Theme.of(context).accentColor,
-//                                  ),
-//                                  title: Text(S.of(context).listMessages),
-//                                  trailing: Icon(
-//                                    Icons.arrow_forward_ios,
-//                                    size: 18,
-//                                    color: kGrey600,
-//                                  ),
-//                                ),
-//                              ),
-//                            ),
-//                          if (enabledNotification)
-//                            Divider(
-//                              color: Colors.black12,
-//                              height: 1.0,
-//                              indent: 75,
-//                              //endIndent: 20,
-//                            ),
+                         SizedBox(height: 30.0),
+                         Text(
+                           S.of(context).generalSetting,
+                           style: TextStyle(
+                               fontSize: 18, fontWeight: FontWeight.w600),
+                         ),
+                         SizedBox(height: 10.0),
+                         if (widget.user != null)
+                           Divider(
+                             color: Colors.black12,
+                             height: 1.0,
+                             indent: 75,
+                             //endIndent: 20,
+                           ),
+                         Card(
+                           margin: EdgeInsets.only(bottom: 2.0),
+                           elevation: 0,
+                           child: ListTile(
+                             leading: Icon(
+                               Icons.favorite_border,
+                               color: Theme.of(context).accentColor,
+                               size: 26,
+                             ),
+                             title: Text(
+                               S.of(context).myWishList,
+                               style: TextStyle(fontSize: 15),
+                             ),
+                             trailing: Row(
+                               mainAxisSize: MainAxisSize.min,
+                               children: [
+                                 if (wishListCount > 0)
+                                   Text(
+                                     "$wishListCount ${S.of(context).items}",
+                                     style: TextStyle(
+                                         fontSize: 14,
+                                         color:
+                                             Theme.of(context).primaryColor),
+                                   ),
+                                 SizedBox(width: 5),
+                                 Icon(Icons.arrow_forward_ios,
+                                     size: 18, color: kGrey600)
+                               ],
+                             ),
+                             onTap: () {
+                               Navigator.pushNamed(context, "/wishlist");
+                             },
+                           ),
+                         ),
+                         Divider(
+                           color: Colors.black12,
+                           height: 1.0,
+                           indent: 75,
+                           //endIndent: 20,
+                         ),
+                         Card(
+                           margin: EdgeInsets.only(bottom: 2.0),
+                           elevation: 0,
+                           child: SwitchListTile(
+                             secondary: Icon(
+                               Icons.notifications_none,
+                               color: Theme.of(context).accentColor,
+                               size: 26,
+                             ),
+                             value: enabledNotification,
+                             activeColor: Color(0xFF0066B4),
+                             onChanged: (bool value) {
+                               if (value) {
+                                 NotificationPermissions
+                                     .requestNotificationPermissions(
+                                   iosSettings: NotificationSettingsIos(
+                                       sound: true, badge: true, alert: true),
+                                 ).then((_) {
+                                   checkNotificationPermission();
+                                 });
+                               }
+                               setState(() {
+                                 enabledNotification = value;
+                               });
+                             },
+                             title: Text(
+                               S.of(context).getNotification,
+                               style: TextStyle(fontSize: 16),
+                             ),
+                           ),
+                         ),
+                         Divider(
+                           color: Colors.black12,
+                           height: 1.0,
+                           indent: 75,
+                           //endIndent: 20,
+                         ),
+                         if (enabledNotification)
+                           Card(
+                             margin: EdgeInsets.only(bottom: 2.0),
+                             elevation: 0,
+                             child: GestureDetector(
+                               onTap: () {
+                                 Navigator.push(
+                                   context,
+                                   MaterialPageRoute(
+                                       builder: (context) =>
+                                           NotificationScreen()),
+                                 );
+                               },
+                               child: ListTile(
+                                 leading: Icon(
+                                   Icons.list,
+                                   size: 24,
+                                   color: Theme.of(context).accentColor,
+                                 ),
+                                 title: Text(S.of(context).listMessages),
+                                 trailing: Icon(
+                                   Icons.arrow_forward_ios,
+                                   size: 18,
+                                   color: kGrey600,
+                                 ),
+                               ),
+                             ),
+                           ),
+                         if (enabledNotification)
+                           Divider(
+                             color: Colors.black12,
+                             height: 1.0,
+                             indent: 75,
+                             //endIndent: 20,
+                           ),
 
-//                          Card(
-//                            margin: EdgeInsets.only(bottom: 2.0),
-//                            elevation: 0,
-//                            child: GestureDetector(
-//                              onTap: () {
-//                                Navigator.push(
-//                                  context,
-//                                  MaterialPageRoute(
-//                                      builder: (context) => Language()),
-//                                );
-//                              },
-//                              child: ListTile(
-//                                leading: Icon(
-//                                  Icons.language,
-//                                  color: Theme.of(context).accentColor,
-//                                  size: 24,
-//                                ),
-//                                title: Text(S.of(context).language),
-//                                trailing: Icon(
-//                                  Icons.arrow_forward_ios,
-//                                  size: 18,
-//                                  color: kGrey600,
-//                                ),
-//                              ),
-//                            ),
-//                          ),
-//                          Divider(
-//                            color: Colors.black12,
-//                            height: 1.0,
-//                            indent: 75,
-//                            //endIndent: 20,
-//                          ),
-//                          Card(
-//                            margin: EdgeInsets.only(bottom: 2.0),
-//                            elevation: 0,
-//                            child: ListTile(
-//                              onTap: () {
-//                                Navigator.push(
-//                                  context,
-//                                  MaterialPageRoute(
-//                                      builder: (context) => Currencies()),
-//                                );
-//                              },
-//                              leading: Icon(FontAwesomeIcons.dollarSign,
-//                                  size: 22,
-//                                  color: Theme.of(context).accentColor),
-//                              title: Text(S.of(context).currencies,
-//                                  style: TextStyle(fontSize: 16)),
-//                              trailing: Icon(Icons.arrow_forward_ios,
-//                                  size: 18, color: kGrey600),
-//                            ),
-//                          ),
-//                          Divider(
-//                            color: Colors.black12,
-//                            height: 1.0,
-//                            indent: 75,
-//                            //endIndent: 20,
-//                          ),
-//                          Card(
-//                            margin: EdgeInsets.only(bottom: 2.0),
-//                            elevation: 0,
-//                            child: SwitchListTile(
-//                              secondary: Icon(
-//                                Icons.brightness_2,
-//                                color: Theme.of(context).accentColor,
-//                                size: 24,
-//                              ),
-//                              value: Provider.of<AppModel>(context).darkTheme,
-//                              activeColor: Color(0xFF0066B4),
-//                              onChanged: (bool value) {
-//                                if (value) {
-//                                  Provider.of<AppModel>(context, listen: false)
-//                                      .updateTheme(true);
-//                                } else {
-//                                  Provider.of<AppModel>(context, listen: false)
-//                                      .updateTheme(false);
-//                                }
-//                              },
-//                              title: Text(
-//                                S.of(context).darkTheme,
-//                                style: TextStyle(fontSize: 16),
-//                              ),
-//                            ),
-//                          ),
+                         Card(
+                           margin: EdgeInsets.only(bottom: 2.0),
+                           elevation: 0,
+                           child: GestureDetector(
+                             onTap: () {
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                     builder: (context) => Language()),
+                               );
+                             },
+                             child: ListTile(
+                               leading: Icon(
+                                 Icons.language,
+                                 color: Theme.of(context).accentColor,
+                                 size: 24,
+                               ),
+                               title: Text(S.of(context).language),
+                               trailing: Icon(
+                                 Icons.arrow_forward_ios,
+                                 size: 18,
+                                 color: kGrey600,
+                               ),
+                             ),
+                           ),
+                         ),
+                         Divider(
+                           color: Colors.black12,
+                           height: 1.0,
+                           indent: 75,
+                           //endIndent: 20,
+                         ),
+                         Card(
+                           margin: EdgeInsets.only(bottom: 2.0),
+                           elevation: 0,
+                           child: ListTile(
+                             onTap: () {
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                     builder: (context) => Currencies()),
+                               );
+                             },
+                             leading: Icon(FontAwesomeIcons.dollarSign,
+                                 size: 22,
+                                 color: Theme.of(context).accentColor),
+                             title: Text(S.of(context).currencies,
+                                 style: TextStyle(fontSize: 16)),
+                             trailing: Icon(Icons.arrow_forward_ios,
+                                 size: 18, color: kGrey600),
+                           ),
+                         ),
+                         Divider(
+                           color: Colors.black12,
+                           height: 1.0,
+                           indent: 75,
+                           //endIndent: 20,
+                         ),
+                         Card(
+                           margin: EdgeInsets.only(bottom: 2.0),
+                           elevation: 0,
+                           child: SwitchListTile(
+                             secondary: Icon(
+                               Icons.brightness_2,
+                               color: Theme.of(context).accentColor,
+                               size: 24,
+                             ),
+                             value: Provider.of<AppModel>(context).darkTheme,
+                             activeColor: Color(0xFF0066B4),
+                             onChanged: (bool value) {
+                               if (value) {
+                                 Provider.of<AppModel>(context, listen: false)
+                                     .updateTheme(true);
+                               } else {
+                                 Provider.of<AppModel>(context, listen: false)
+                                     .updateTheme(false);
+                               }
+                             },
+                             title: Text(
+                               S.of(context).darkTheme,
+                               style: TextStyle(fontSize: 16),
+                             ),
+                           ),
+                         ),
                           SizedBox(height: 30.0),
                           Text(
                             S.of(context).otherLinks,
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w600),
                           ),
-//                          SizedBox(height: 10.0),
-//                          if (widget.user != null)
-//                            GestureDetector(
-//                              onTap: () {
-//                                Navigator.pushNamed(context, "/orders");
-//                              },
-//                              child: Card(
-//                                margin: EdgeInsets.only(bottom: 2.0),
-//                                elevation: 0,
-//                                child: ListTile(
-//                                  leading: Icon(
-//                                    Icons.history,
-//                                    color: Theme.of(context).accentColor,
-//                                    size: 24,
-//                                  ),
-//                                  title: Text(S.of(context).orderHistory,
-//                                      style: TextStyle(fontSize: 16)),
-//                                  trailing: Icon(Icons.arrow_forward_ios,
-//                                      size: 18, color: kGrey600),
-//                                ),
-//                              ),
-//                            ),
-//                          if (config.kAdvanceConfig['EnablePointReward'] ==
-//                                  true &&
-//                              widget.user != null)
-//                            Divider(
-//                              color: Colors.black12,
-//                              height: 1.0,
-//                              indent: 75,
-//                              //endIndent: 20,
-//                            ),
-//                          if (config.kAdvanceConfig['EnablePointReward'] ==
-//                                  true &&
-//                              widget.user != null)
-//                            InkWell(
-//                              onTap: () {
-//                                Navigator.push(
-//                                  context,
-//                                  MaterialPageRoute(
-//                                    builder: (context) => UserPoint(),
-//                                  ),
-//                                );
-//                              },
-//                              child: Card(
-//                                margin: EdgeInsets.only(bottom: 2.0),
-//                                elevation: 0,
-//                                child: ListTile(
-//                                  leading: Icon(
-//                                    Icons.control_point_duplicate,
-//                                    color: Theme.of(context).accentColor,
-//                                    size: 24,
-//                                  ),
-//                                  title: Text(S.of(context).myPoints,
-//                                      style: TextStyle(fontSize: 16)),
-//                                  trailing: Icon(Icons.arrow_forward_ios,
-//                                      size: 18, color: kGrey600),
-//                                ),
-//                              ),
-//                            ),/
-//                            Divider(
-//                            color: Colors.black12,
-//                            height: 1.0,//                           indent: 75,
-//                            //endIndent: 20,
-//                          ),
-//                          if (config.kAdvanceConfig["EnableRating"])
-//                            Card(
-//                              margin: EdgeInsets.only(bottom: 2.0),
-//                              elevation: 0,
-//                              child: ListTile(
-//                                onTap: () {
-//                                  _rateMyApp
-//                                      .showRateDialog(context)
-//                                      .then((v) => setState(() {}));
-//                                },
-//                                leading: Icon(
-//                                  FontAwesomeIcons.star,
-//                                  color: Theme.of(context).accentColor,
-//                                  size: 21,
-//                                ),
-//                                title: Text(
-//                                  S.of(context).rateTheApp,
-//                                  style: TextStyle(fontSize: 16),
-//                                ),
-//                                trailing: Icon(
-//                                  Icons.arrow_forward_ios,
-//                                  size: 18,
-//                                  color: kGrey600,
-//                                ),
-//                              ),
-//                            ),
+                         SizedBox(height: 10.0),
+                         if (widget.user != null)
+                           GestureDetector(
+                             onTap: () {
+                               Navigator.pushNamed(context, "/orders");
+                             },
+                             child: Card(
+                               margin: EdgeInsets.only(bottom: 2.0),
+                               elevation: 0,
+                               child: ListTile(
+                                 leading: Icon(
+                                   Icons.history,
+                                   color: Theme.of(context).accentColor,
+                                   size: 24,
+                                 ),
+                                 title: Text(S.of(context).orderHistory,
+                                     style: TextStyle(fontSize: 16)),
+                                 trailing: Icon(Icons.arrow_forward_ios,
+                                     size: 18, color: kGrey600),
+                               ),
+                             ),
+                           ),
+                         if (config.kAdvanceConfig['EnablePointReward'] ==
+                                 true &&
+                             widget.user != null)
+                           Divider(
+                             color: Colors.black12,
+                             height: 1.0,
+                             indent: 75,
+                             //endIndent: 20,
+                           ),
+                         if (config.kAdvanceConfig['EnablePointReward'] ==
+                                 true &&
+                             widget.user != null)
+                           InkWell(
+                             onTap: () {
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                   builder: (context) => UserPoint(),
+                                 ),
+                               );
+                             },
+                             child: Card(
+                               margin: EdgeInsets.only(bottom: 2.0),
+                               elevation: 0,
+                               child: ListTile(
+                                 leading: Icon(
+                                   Icons.control_point_duplicate,
+                                   color: Theme.of(context).accentColor,
+                                   size: 24,
+                                 ),
+                                 title: Text(S.of(context).myPoints,
+                                     style: TextStyle(fontSize: 16)),
+                                 trailing: Icon(Icons.arrow_forward_ios,
+                                     size: 18, color: kGrey600),
+                               ),
+                             ),
+                           ),/
+                           Divider(
+                           color: Colors.black12,
+                           height: 1.0,//                           indent: 75,
+                           //endIndent: 20,
+                         ),
+                         if (config.kAdvanceConfig["EnableRating"])
+                           Card(
+                             margin: EdgeInsets.only(bottom: 2.0),
+                             elevation: 0,
+                             child: ListTile(
+                               onTap: () {
+                                 _rateMyApp
+                                     .showRateDialog(context)
+                                     .then((v) => setState(() {}));
+                               },
+                               leading: Icon(
+                                 FontAwesomeIcons.star,
+                                 color: Theme.of(context).accentColor,
+                                 size: 21,
+                               ),
+                               title: Text(
+                                 S.of(context).rateTheApp,
+                                 style: TextStyle(fontSize: 16),
+                               ),
+                               trailing: Icon(
+                                 Icons.arrow_forward_ios,
+                                 size: 18,
+                                 color: kGrey600,
+                               ),
+                             ),
+                           ),
 
                           Card(
                             margin: EdgeInsets.only(bottom: 2.0),
