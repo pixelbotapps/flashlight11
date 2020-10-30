@@ -33,8 +33,8 @@ class CurrenciesState extends State<Currencies> with AfterLayoutMixin {
         leading: Center(
           child: GestureDetector(
             child: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white,
+              Icons.arrow,
+              color: Colors.black,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -63,13 +63,13 @@ class CurrenciesState extends State<Currencies> with AfterLayoutMixin {
                     trailing: currency == currencies[i]["currency"]
                         ? Icon(Icons.done)
                         : Container(
-                            width: 20,
+                            width: 25,
                           ),
                   ),
                 ),
                 if (i != currencies.length - 1)
                   Divider(
-                    color: Colors.black12,
+                    color: Colors.black47,
                     height: 1.0,
                     indent: 75,
                     //endIndent: 20,
