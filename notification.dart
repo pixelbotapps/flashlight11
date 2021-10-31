@@ -160,6 +160,40 @@ class _NotificationScreenState extends State<NotificationScreen> {
 //      print(err);
     }
   }
+  
+   Future<void> removeItem(int index) async {
+    try {
+      final ready = await storage.ready;
+      if (ready) {
+        var list = storage.getItem('notifications');
+        list ??= [];
+        list.removeAt(index);
+        await storage.setItem('notifications', list);
+        setState(() {
+          _data = list;
+        });
+      }
+    } catch (err) {
+//      print(err);
+    }
+  }
+  
+   Future<void> removeItem(int index) async {
+    try {
+      final ready = await storage.ready;
+      if (ready) {
+        var list = storage.getItem('notifications');
+        list ??= [];
+        list.removeAt(index);
+        await storage.setItem('notifications', list);
+        setState(() {
+          _data = list;
+        });
+      }
+    } catch (err) {
+//      print(err);
+    }
+  }
 
   Future<void> _showAlert(
       BuildContext context, FStoreNotification data, int index) async {
