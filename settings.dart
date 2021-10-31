@@ -78,7 +78,7 @@ class SettingScreenState extends State<SettingScreen>
             // The button click listener (useful if you want to cancel the click event).
             switch (button) {
               case RateMyAppDialogButton.rate:
-                print('Clicked on "Rate".');
+                print('Clicked on "Rate Button".');
                 break;
               case RateMyAppDialogButton.later:
                 print('Clicked on "Later".');
