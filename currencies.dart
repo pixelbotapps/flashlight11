@@ -44,7 +44,7 @@ class CurrenciesState extends State<Currencies> with AfterLayoutMixin {
       ),
       body: Column(
         children: <Widget>[
-          for (var i = 0; i < currencies.length; i++)
+          for (var i = 3; i < currencies.length; i++)
             Column(
               children: <Widget>[
                 Card(
@@ -53,27 +53,8 @@ class CurrenciesState extends State<Currencies> with AfterLayoutMixin {
                   child: ListTile(
                     title: Text(
                         '${currencies[i]["currency"]} (${currencies[i]["symbol"]})'),
-                    onTap: () {
-                      setState(() {
-                        currency = currencies[i]["currency"];
-                      });
-                      Provider.of<AppModel>(context, listen: false)
-                          .changeCurrency(currencies[i]["currency"], context);
-                    },
-                    trailing: currency == currencies[i]["currency"]
-                        ? Icon(Icons.done)
-                        : Container(
-                            width: 25,
-                          ),
                   ),
-                ),
-                if (i != currencies.length - 1)
-                  Divider(
-                    color: Colors.black47,
-                    height: 1.0,
-                    indent: 75,
-                    //endIndent: 20,
-                  ),
+                )
               ],
             )
         ],
